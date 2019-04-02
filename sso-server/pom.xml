@@ -23,6 +23,27 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
+        <!--新增支持jdbc验证-->
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-jdbc</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
+        <!-- hsqldb驱动 -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.4</version>
+        </dependency>
+        <!--
+若不想找驱动可以直接写下面的依赖即可，其中包括
+HSQLDB、Oracle、MYSQL、PostgreSQL、MariaDB、Microsoft SQL Server
+-->
+        <!--<dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-jdbc-drivers</artifactId>
+            <version>${cas.version}</version>
+        </dependency>-->
     </dependencies>
     <dependencyManagement>
         <dependencies>
