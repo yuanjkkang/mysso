@@ -86,3 +86,17 @@ build.cmd help
 ## External
 
 Deploy resultant `target/cas.war`  to a servlet container of choice.
+
+##添加HTTPS
+
+###keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA -validity 36500 -alias passport.sso.com -keystore d:/tomcat.keystore -dname "CN=passport.sso.com,OU=kawhi,O=carl,L=GuangZhou,ST=GuangDong,C=CN"
+
+
+
+###keytool -exportcert -alias passport.sso.com -keystore d:/tomcat.keystore  -file d:/tomcat.cer -rfc
+
+
+###导入证书，默认密码是changeit，不是生成证书时设置的密码
+###keytool -import -alias passport.sso.com -keystore %JAVA_HOME%\jre\lib\security\cacerts -file d:/tomcat.cer -trustcacerts
+###检查是否导入成功，有东西输出，就是成功
+###keytool -list -keystore "%JAVA_HOME%\jre\lib\security\cacerts" | findstr/i server
