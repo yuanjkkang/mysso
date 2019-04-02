@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sso.iml" filepath="$PROJECT_DIR$/sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso-config/sso-config.iml" filepath="$PROJECT_DIR$/sso-config/sso-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/sso-server/sso-server.iml" filepath="$PROJECT_DIR$/sso-server/sso-server.iml" />
     </modules>
   </component>
